@@ -1,0 +1,9 @@
+@use "fonts";
+@use "config";
+@use "reset";
+
+@use "mixins";
+@use "common";
+
+@use "blocks/**/*" as *;
+@use "shared/**/*" as *;
