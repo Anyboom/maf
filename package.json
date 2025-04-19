@@ -13,6 +13,11 @@
     "@christian-beckmann/parcel-transformer-twig": "github:christian-beckmann/parcel-transformer-twig",
     "@parcel/transformer-sass": "^2.13.2",
     "node-sass-glob-importer": "^5.3.3",
-    "parcel": "^2.13.2"
+    "parcel": "^2.13.2",
+    "sharp": "^0.33.5",
+    "svgo": "^3.3.2"
+  },
+  "dependencies": {
+    "swiper": "^11.2.6"
   }
 }

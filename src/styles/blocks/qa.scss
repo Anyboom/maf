@@ -1,0 +1,18 @@
+@use "../functions" as *;
+
+.qa {
+  margin-bottom: rem(50);
+  &__title {
+    margin-bottom: rem(90);
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(30);
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+  }
+}

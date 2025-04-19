@@ -1,0 +1,108 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+@use "sass:color";
+
+.header {
+  border-radius: rem(10);
+  padding: rem(20);
+  color: var(--color-default-white);
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+  &_colored {
+    background: var(--color-default-black);
+  }
+  &__line {
+    width: 100%;
+    background: rgba(#ffffff, 0.1);
+    height: rem(2);
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__search-input {
+    max-width: rem(360);
+    background: var(--color-default-white);
+  }
+  &__socials {
+    display: flex;
+    gap: rem(20);
+  }
+  &__socials-image {
+    fill: rgb(var(--color-nandor));
+    @include hover {
+      fill: rgb(var(--color-nandor-hover));
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-weight: 500;
+  }
+  &__contacts-email {
+    font-size: rem(14);
+  }
+  &__contacts-phone {
+    font-size: rem(20);
+  }
+  &__search-wrapper {
+    position: relative;
+  }
+  &__search-input {
+    border-radius: rem(20);
+    width: rem(340);
+    padding: rem(10) rem(40) rem(10) rem(20);
+    color: var(--color-default-black);
+    &::placeholder {
+      color: rgba(var(--color-default-black), 0.8);
+      font-weight: 300;
+    }
+  }
+  &__search-icon {
+    position: absolute;
+    transform: translateY(50%);
+    right: rem(15);
+  }
+  &__button {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: rem(20);
+  }
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    gap: rem(50);
+  }
+  &__nav-link {
+    color: var(--color-default-white);
+    text-transform: uppercase;
+    font-weight: 500;
+    @include hover {
+      color: rgb(var(--color-nandor-hover));
+    }
+  }
+  &__nav-catalog {
+    display: flex;
+    align-content: center;
+    gap: rem(20);
+    padding: rem(20);
+    border-radius: rem(6);
+    border: 1px solid var(--color-default-white);
+    span {
+      text-transform: uppercase;
+      color: var(--color-default-white);
+    }
+    @include hover {
+      background: rgb(var(--color-nandor-hover));
+      border: 1px solid rgb(var(--color-nandor-hover));
+    }
+  }
+}

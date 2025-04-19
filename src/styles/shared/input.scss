@@ -1,0 +1,13 @@
+@use "../functions" as *;
+
+.input {
+  border-radius: rem(10);
+  padding: rem(25) rem(30);
+  background: var(--color-default-white);
+  color: var(--color-default-black);
+  font-size: rem(20);
+  &::placeholder {
+    color: var(--color-default-black);
+    font-size: rem(20);
+  }
+}

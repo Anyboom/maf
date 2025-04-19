@@ -1,4 +1,46 @@
 @use "mixins" as *;
 
-@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
-@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+@font-face {
+  font-family: "jost";
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+
+  src: url('../fonts/JostRegular/JostRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "jost";
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+
+  src: url('../fonts/JostLight/JostLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "jost";
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+
+  src: url('../fonts/JostMedium/JostMedium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "jost";
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+
+  src: url('../fonts/JostSemiBold/JostSemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "jost";
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+
+  src: url('../fonts/JostBold/JostBold.ttf') format('truetype');
+}

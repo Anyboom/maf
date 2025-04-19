@@ -1,0 +1,63 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.news {
+  padding-top: rem(80);
+  margin-bottom: rem(50);
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(50);
+  }
+  &__header-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-default-black);
+    font-weight: bold;
+    font-size: rem(24);
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    border-bottom: 2px solid transparent;
+    @include hover {
+      border-bottom: 2px solid var(--color-default-black);
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(30);
+    color: var(--color-default-black);
+  }
+  &__card {
+    @include hover {
+      .news__card-title, .news__card-caption {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__card-image-wrapper {
+    border-radius: rem(20);
+    height: rem(260);
+    overflow: hidden;
+    margin-bottom: rem(25);
+  }
+  &__card-image {
+    height: 100%;
+    width: 100%;
+    object-fit: none;
+  }
+  &__card-title {
+    color: var(--color-default-black);
+    font-weight: bold;
+    font-size: rem(24);
+    text-transform: uppercase;
+    margin-bottom: rem(25);
+  }
+  &__card-caption {
+    color: var(--color-default-black);
+    font-size: rem(16);
+    font-weight: 300;
+  }
+}

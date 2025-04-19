@@ -1,0 +1,35 @@
+@use "../functions" as *;
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(40);
+  color: var(--color-default-white);
+  gap: rem(40);
+  &__item {
+    display: flex;
+    gap: rem(20);
+    align-items: center;
+  }
+  &__number-wrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  &__number {
+    font-weight: bold;
+    font-size: rem(48);
+    white-space: nowrap;
+  }
+  &__caption {
+    font-size: rem(20);
+    font-weight: 500;
+    opacity: 0.5;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: 1;
+  }
+}

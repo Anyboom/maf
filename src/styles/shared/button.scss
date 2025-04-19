@@ -1,0 +1,21 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.button {
+  background: rgb(var(--color-nandor)) !important;
+  text-transform: uppercase;
+  padding: rem(20);
+  border-radius: rem(20);
+  color: var(--color-default-white);
+  font-weight: 500;
+  font-size: rem(14);
+  &_font_large {
+    padding: rem(20) rem(40);
+    border-radius: rem(10);
+    font-weight: bold;
+    font-size: rem(20);
+  }
+  @include hover {
+    background: rgb(var(--color-nandor-hover)) !important;
+  }
+}

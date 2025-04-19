@@ -1,0 +1,43 @@
+@use "../functions" as *;
+
+.form-project {
+  margin-bottom: rem(50);
+  position: relative;
+  z-index: 100;
+  &__wrapper {
+    border-radius: rem(20);
+    background: #212121;
+    padding: rem(60);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content {
+    color: var(--color-default-white);
+    line-height: 1.2;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: rem(48);
+    text-transform: uppercase;
+    max-width: rem(500);
+    display: block;
+    margin-bottom: rem(20);
+  }
+  &__caption {
+    display: block;
+    font-size: rem(24);
+    font-weight: 300;
+    max-width: rem(550);
+    padding-left: rem(80);
+  }
+  &__form {
+    min-width: rem(410);
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+  &__form-input {
+    width: 100%;
+  }
+}

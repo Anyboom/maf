@@ -1,5 +1,21 @@
+@use "functions" as *;
+
 body {
-  min-width: 320px;
+  padding: rem(25) 0;
+  min-width: 380px;
   position: relative;
   overflow-x: hidden;
+  font-family: "jost", sans-serif;
+  background: var(--color-default-white);
+}
+
+.container {
+  max-width: var(--view-port-xxl);
+  margin: 0 auto;
+  padding: 0 rem(36);
+}
+
+::selection {
+  color: var(--color-default-white);
+  background: rgb(var(--color-nandor-hover));
 }

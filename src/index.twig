@@ -7,11 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="styles/index.scss">
-    <script defer src="js/app.ts"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
-<h1>Parcel Starter</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quibusdam.</p>
-{% include 'parts/component.twig' %}
+<div class="container">
+    {% include 'parts/banner.twig' %}
+    {% include 'parts/services.twig' %}
+    {% include 'parts/works.twig' %}
+    {% include 'parts/quality.twig' %}
+    {% include 'parts/form-catalog.twig' %}
+    {% include 'parts/children-quality.twig' %}
+    {% include 'parts/form-project.twig' %}
+    {% include 'parts/about.twig' %}
+    {% include 'parts/qa.twig' %}
+    {% include 'parts/news.twig' %}
+    {% include 'parts/form-consultation.twig' %}
+    {% include 'parts/company.twig' %}
+    {% include 'parts/contacts.twig' %}
+</div>
+<script defer type="module" src="js/app.ts"></script>
 </body>
 </html>

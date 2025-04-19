@@ -1,0 +1,12 @@
+@use "../functions" as *;
+
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  &_font_large {
+    font-size: rem(48);
+  }
+  &_font_middle {
+    font-size: rem(40);
+  }
+}

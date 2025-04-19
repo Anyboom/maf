@@ -1,0 +1,51 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.works {
+  overflow-x: hidden;
+  position: relative;
+  padding-bottom: rem(30);
+  margin-bottom: rem(50);
+  &__item-wrapper {
+    height: rem(254);
+    background: #D3D3D3;
+    overflow: hidden;
+    border-radius: rem(20);
+    position: relative;
+    @include hover {
+      background: linear-gradient(120deg,rgba(0, 0, 0, 1) 0%, rgba(38, 38, 38, 1) 40%, rgba(30, 65, 31, 1) 70%);
+      .works__item-caption {
+        color: var(--color-default-white);
+      }
+      + .works__item-line {
+        background: linear-gradient(120deg,rgba(0, 0, 0, 1) 0%, rgba(38, 38, 38, 1) 40%, rgba(30, 65, 31, 1) 70%);
+      }
+    }
+  }
+  &__item-line {
+    background: #D3D3D3;
+    width: 100%;
+    height: rem(3);
+    position: absolute;
+    bottom: rem(-30);
+    border-radius: rem(10);
+  }
+  &__item-image {
+    position: absolute;
+    right: -35%;
+    bottom: -20%;
+    object-fit: contain;
+  }
+  &__item-caption {
+    font-weight: bold;
+    font-size: rem(24);
+    color: var(--color-default-black);
+    text-transform: uppercase;
+    max-width: rem(200);
+    display: inline-block;
+    line-height: 1.2;
+    position: absolute;
+    top: rem(30);
+    left: rem(20);
+  }
+}

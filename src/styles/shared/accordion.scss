@@ -1,0 +1,66 @@
+@use "../functions" as *;
+
+.accordion {
+  &[open] {
+    .accordion__icon-vertical {
+      display: none;
+    }
+  }
+  &__summary {
+    border-radius: rem(20);
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    padding: rem(30) rem(90) rem(30) rem(30);
+    background: #ffffff;
+    position: relative;
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: rem(20);
+  }
+  &__icon {
+    width: rem(35);
+    height: rem(35);
+    border-radius: 50%;
+    border: rem(1) solid rgb(var(--color-nandor));
+    position: absolute;
+    right: rem(50);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icon-wrapper {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+  &__icon-horizontal, &__icon-vertical {
+    background: rgb(var(--color-nandor));
+    position: absolute;
+  }
+  &__icon-vertical {
+    width: rem(1);
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__icon-horizontal {
+    width: 100%;
+    height: rem(1);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__content {
+    background: #ffffff;
+    border-radius: rem(20);
+    margin-top: rem(10);
+    padding: rem(30);
+  }
+}

@@ -1,0 +1,17 @@
+@use "../functions" as *;
+
+.content {
+  h2 {
+    font-size: rem(32);
+    margin-bottom: rem(30);
+    line-height: 1;
+  }
+
+  p {
+    font-size: rem(20);
+    line-height: 1.2;
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@use "../functions" as *;
+
+.services {
+  margin-bottom: rem(50);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: rem(30);
+  position: relative;
+  &__caption {
+    position: absolute;
+    bottom: rem(60);
+    left: rem(30);
+    color: var(--color-default-white);
+    text-transform: uppercase;
+    display: flex;
+    max-width: rem(400);
+    flex-wrap: wrap;
+    gap: rem(7);
+  }
+  &__caption-text, &__caption-icon {
+    width: fit-content;
+    font-size: rem(36);
+    font-weight: bold;
+    padding: rem(10) rem(25);
+    background: rgb(var(--color-nandor));
+    border-radius: rem(20);
+    display: inline-block;
+  }
+  &__caption-icon {
+    display: flex;
+    justify-items: center;
+    align-content: center;
+  }
+  &__item {
+    border-radius: rem(20);
+    overflow: hidden;
+    position: relative;
+    &:first-child {
+      grid-row: 1/3;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+}
