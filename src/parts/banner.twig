@@ -1,84 +1,86 @@
-<section class="banner">
-    <div class="banner__wrapper">
-        <div class="banner__header">
-            {% include 'header.twig' %}
-        </div>
-        <div class="banner__swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="banner__item">
-                        <div class="banner__image-wrapper inverted-radius">
-                            <img class="banner__image" src="img/slide.png?as=webp" />
+<div class="container">
+    <section class="banner">
+        <div class="banner__wrapper">
+            <div class="banner__header">
+                {% include 'header.twig' %}
+            </div>
+            <div class="banner__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="banner__item">
+                            <div class="banner__image-wrapper inverted-radius">
+                                <img class="banner__image" src="img/slide.png?as=webp" />
+                            </div>
+                            <div class="banner__caption">
+                                <div class="banner__caption-wrapper">
+                                    <span class="banner__type">Площадка</span>
+                                    <span class="banner__address">Москва, врубеля, д.4</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="banner__caption">
-                            <div class="banner__caption-wrapper">
-                                <span class="banner__type">Площадка</span>
-                                <span class="banner__address">Москва, врубеля, д.4</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner__item">
+                            <div class="banner__image-wrapper inverted-radius">
+                                <img class="banner__image" src="img/slide.png?as=webp" />
+                            </div>
+                            <div class="banner__caption">
+                                <div class="banner__caption-wrapper">
+                                    <span class="banner__type">Площадка</span>
+                                    <span class="banner__address">Москва, врубеля, д.4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner__item">
+                            <div class="banner__image-wrapper inverted-radius">
+                                <img class="banner__image" src="img/slide.png?as=webp" />
+                            </div>
+                            <div class="banner__caption">
+                                <div class="banner__caption-wrapper">
+                                    <span class="banner__type">Площадка</span>
+                                    <span class="banner__address">Москва, врубеля, д.4</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="banner__item">
-                        <div class="banner__image-wrapper inverted-radius">
-                            <img class="banner__image" src="img/slide.png?as=webp" />
-                        </div>
-                        <div class="banner__caption">
-                            <div class="banner__caption-wrapper">
-                                <span class="banner__type">Площадка</span>
-                                <span class="banner__address">Москва, врубеля, д.4</span>
-                            </div>
-                        </div>
+            </div>
+            <div class="banner__stats stats">
+                <div class="stats__item">
+                    <div class="stats__number-wrapper">
+                        <span class="stats__number">80+</span>
+                        <span class="stats__caption">готовых</span>
                     </div>
+                    <div class="stats__title">Реализованные проекты</div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="banner__item">
-                        <div class="banner__image-wrapper inverted-radius">
-                            <img class="banner__image" src="img/slide.png?as=webp" />
-                        </div>
-                        <div class="banner__caption">
-                            <div class="banner__caption-wrapper">
-                                <span class="banner__type">Площадка</span>
-                                <span class="banner__address">Москва, врубеля, д.4</span>
-                            </div>
-                        </div>
+                <div class="stats__item">
+                    <div class="stats__number-wrapper">
+                        <span class="stats__number">12 466 м²</span>
+                        <span class="stats__caption">площадь</span>
                     </div>
+                    <div class="stats__title">Собственное производство</div>
+                </div>
+                <div class="stats__item">
+                    <div class="stats__number-wrapper">
+                        <span class="stats__number">1800+</span>
+                        <span class="stats__caption">моделей</span>
+                    </div>
+                    <div class="stats__title">Широкий ассортимент</div>
                 </div>
             </div>
-        </div>
-        <div class="banner__stats stats">
-            <div class="stats__item">
-                <div class="stats__number-wrapper">
-                    <span class="stats__number">80+</span>
-                    <span class="stats__caption">готовых</span>
-                </div>
-                <div class="stats__title">Реализованные проекты</div>
-            </div>
-            <div class="stats__item">
-                <div class="stats__number-wrapper">
-                    <span class="stats__number">12 466 м²</span>
-                    <span class="stats__caption">площадь</span>
-                </div>
-                <div class="stats__title">Собственное производство</div>
-            </div>
-            <div class="stats__item">
-                <div class="stats__number-wrapper">
-                    <span class="stats__number">1800+</span>
-                    <span class="stats__caption">моделей</span>
-                </div>
-                <div class="stats__title">Широкий ассортимент</div>
-            </div>
-        </div>
-        <div class="banner__logo">
-            <svg class="banner__logo-image" width="1357" height="200" viewBox="0 0 1357 200">
-                <use href="img/svg-sprite.svg#banner-logo"></use>
-            </svg>
-            <span class="banner__logo-caption">
+            <div class="banner__logo">
+                <svg class="banner__logo-image" width="1357" height="200" viewBox="0 0 1357 200">
+                    <use href="img/svg-sprite.svg#banner-logo"></use>
+                </svg>
+                <span class="banner__logo-caption">
                 - Правильное решение для игровых пространств
             </span>
+            </div>
+            <div class="banner__paginator-wrapper">
+                <div class="banner__paginator"></div>
+            </div>
         </div>
-        <div class="banner__paginator-wrapper">
-            <div class="banner__paginator"></div>
-        </div>
-    </div>
-</section>
+    </section>
+</div>
