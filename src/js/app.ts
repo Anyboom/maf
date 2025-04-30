@@ -1,8 +1,6 @@
 import Swiper from 'swiper'
 import {Pagination} from 'swiper/modules'
 
-import 'swiper/swiper-bundle.min.css'
-
 new Swiper('.banner__swiper', {
   direction: 'horizontal',
   loop: true,

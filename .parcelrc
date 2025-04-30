@@ -1,6 +1,6 @@
 {
-	"extends": ["@parcel/config-default", "@parcel/config-default"],
-	"namers": [ "@agragregra/parcel-namer-beautify", "..." ],
+	"extends": ["@parcel/config-default"],
+	"namers": ["@agragregra/parcel-namer-beautify"],
 	"optimizers": { "*.html": [] },
 	"transformers": {
         "*.twig": ["@christian-beckmann/parcel-transformer-twig"]
