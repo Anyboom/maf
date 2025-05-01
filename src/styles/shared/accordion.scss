@@ -27,7 +27,7 @@
     width: rem(35);
     height: rem(35);
     border-radius: 50%;
-    border: rem(1) solid rgb(var(--color-nandor));
+    border: rem(1) solid var(--color-nandor);
     position: absolute;
     right: rem(50);
     top: 50%;
@@ -42,7 +42,7 @@
     height: 24px;
   }
   &__icon-horizontal, &__icon-vertical {
-    background: rgb(var(--color-nandor));
+    background: var(--color-nandor);
     position: absolute;
   }
   &__icon-vertical {

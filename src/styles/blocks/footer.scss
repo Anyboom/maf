@@ -44,9 +44,9 @@
     gap: rem(20);
   }
   &__logo-socials-image {
-    fill: rgb(var(--color-nandor));
+    fill: var(--color-nandor);
     @include hover {
-      fill: rgb(var(--color-nandor-hover));
+      fill: var(--color-nandor-hover);
     }
   }
   &__logo-caption {

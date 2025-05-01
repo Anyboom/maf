@@ -1,14 +1,11 @@
-@use "functions" as *;
-@use "sass:color";
-
 :root {
   --color-default-white: #FBFAFC;
   --color-default-black: #212121;
   --color-transparent: rgba(255, 255, 255, 0);
 
   // www.htmlcsscolor.com
-  --color-nandor: 73, 99, 74;
-  --color-nandor-hover: 60, 81, 60;
+  --color-nandor: #49634A;
+  --color-nandor-hover: #3C513C;
 
   --font-size: 16px;
   --line-height: 1.65;
