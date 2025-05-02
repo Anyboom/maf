@@ -25,7 +25,7 @@
   &__title {
     text-transform: uppercase;
     font-weight: bold;
-    @include fluid-text(20, 14);
+    @include fluid-text(20, 12);
   }
   &__icon {
     width: rem(35);
