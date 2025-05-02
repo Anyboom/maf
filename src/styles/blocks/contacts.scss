@@ -65,3 +65,7 @@
 .leaflet-control-attribution {
   display: none;
 }
+
+.leaflet-container {
+  touch-action: auto !important;
+}
