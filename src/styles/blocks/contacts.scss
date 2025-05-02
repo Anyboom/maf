@@ -23,6 +23,9 @@
     @include view-port-md {
       order: -1;
     }
+    @include view-port-sm {
+      height: rem(320);
+    }
   }
   &__map-object {
     height: 100%;
@@ -64,8 +67,4 @@
 
 .leaflet-control-attribution {
   display: none;
-}
-
-.leaflet-container {
-  touch-action: auto !important;
 }

@@ -30,37 +30,37 @@
 }
 
 @mixin view-port-xxl {
-  @media (width <= $view-port-xxl) {
+  @media (max-width: $view-port-xxl) {
     @content;
   }
 }
 
 @mixin view-port-xl {
-  @media (width <= $view-port-xl) {
+  @media (max-width: $view-port-xl) {
     @content;
   }
 }
 
 @mixin view-port-lg {
-  @media (width <= $view-port-lg) {
+  @media (max-width: $view-port-lg) {
     @content;
   }
 }
 
 @mixin view-port-md {
-  @media (width <= $view-port-md) {
+  @media (max-width: $view-port-md) {
     @content;
   }
 }
 
 @mixin view-port-sm {
-  @media (width <= $view-port-sm) {
+  @media (max-width: $view-port-sm) {
     @content;
   }
 }
 
 @mixin view-port-xs {
-  @media (width <= $view-port-xs) {
+  @media (max-width: $view-port-xs) {
     @content;
   }
 }

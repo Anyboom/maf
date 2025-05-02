@@ -144,12 +144,6 @@
   --s: 30px;
   --x: 1151px;
   --y: 165px;
-  @include view-port-xxl {
-    --r: 30px;
-    --s: 30px;
-    --x: 860px;
-    --y: 165px;
-  }
   aspect-ratio: 1;
   background: #000;
   border-radius: var(--r);
@@ -176,5 +170,11 @@
 
   @include view-port-lg {
     mask: none;
+  }
+  @include view-port-xxl {
+    --r: 30px;
+    --s: 30px;
+    --x: 860px;
+    --y: 165px;
   }
 }
