@@ -1,4 +1,5 @@
 @use "../functions" as *;
+@use "../mixins" as *;
 
 .services {
   margin-bottom: rem(50);
@@ -7,6 +8,10 @@
   grid-template-rows: repeat(2, 1fr);
   gap: rem(30);
   position: relative;
+  @include view-port-sm {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
   &__caption {
     position: absolute;
     bottom: rem(60);
@@ -17,10 +22,18 @@
     max-width: rem(400);
     flex-wrap: wrap;
     gap: rem(7);
+    @include view-port-md {
+      bottom: rem(20);
+      left: rem(20);
+    }
+    @include view-port-sm {
+      bottom: rem(15);
+      left: rem(15);
+    }
   }
   &__caption-text, &__caption-icon {
     width: fit-content;
-    font-size: rem(36);
+    @include fluid-text(36, 14);
     font-weight: bold;
     padding: rem(10) rem(25);
     background: var(--color-nandor);
@@ -31,6 +44,9 @@
     display: flex;
     justify-items: center;
     align-content: center;
+    @include view-port-md {
+      display: none;
+    }
   }
   &__item {
     border-radius: rem(20);

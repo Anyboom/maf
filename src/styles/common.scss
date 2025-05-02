@@ -1,4 +1,6 @@
 @use "functions" as *;
+@use "config" as *;
+@use "mixins" as *;
 
 body {
   padding-top: rem(25);
@@ -12,9 +14,16 @@ body {
 }
 
 .container {
-  max-width: var(--view-port-xxl);
+  max-width: $view-port-xxl;
   margin: 0 auto;
   padding: 0 rem(36);
+  @include view-port-sm {
+    padding: 0 rem(18);
+  }
+}
+
+.hidden {
+  overflow: hidden;
 }
 
 ::selection {

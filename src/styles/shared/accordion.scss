@@ -1,4 +1,5 @@
 @use "../functions" as *;
+@use "../mixins" as *;
 
 .accordion {
   &[open] {
@@ -14,6 +15,9 @@
     padding: rem(30) rem(90) rem(30) rem(30);
     background: #ffffff;
     position: relative;
+    @include view-port-md {
+      padding: rem(20) rem(70) rem(20) rem(20);
+    }
     &::-webkit-details-marker {
       display: none;
     }
@@ -21,7 +25,7 @@
   &__title {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: rem(20);
+    @include fluid-text(20, 14);
   }
   &__icon {
     width: rem(35);
@@ -35,6 +39,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include view-port-md {
+      right: rem(20);
+    }
   }
   &__icon-wrapper {
     position: relative;
@@ -62,5 +69,8 @@
     border-radius: rem(20);
     margin-top: rem(10);
     padding: rem(30);
+    @include view-port-md {
+      padding: rem(20);
+    }
   }
 }

@@ -1,4 +1,5 @@
 @use "../functions" as *;
+@use "../mixins" as *;
 
 .banner {
   position: relative;
@@ -16,6 +17,9 @@
     max-height: rem(1080);
     position: relative;
     height: rem(1080);
+    @include view-port-lg {
+      height: rem(600);
+    }
   }
   &__image-wrapper {
     height: 100%;
@@ -39,16 +43,20 @@
     right: 0;
     bottom: 0;
     left: 0;
+    object-fit: none;
   }
   &__stats {
-    background: var(--color-nandor);
     position: absolute;
     bottom: 0;
     right: 0;
     height: rem(200);
     width: rem(1185);
-    border-radius: rem(20);
-    z-index: 1000;
+    @include view-port-lg {
+      display: none !important;
+    }
+    @include view-port-xxl {
+      width: rem(900);
+    }
   }
   &__logo {
     position: absolute;
@@ -62,9 +70,11 @@
     align-items: center;
     flex-direction: column;
     gap: rem(24);
+    padding: 0 rem(40);
+    text-align: center;
   }
   &__logo-caption {
-    font-size: rem(40);
+    @include fluid-text(40, 12);
     font-weight: bold;
     text-transform: uppercase;
     color: var(--color-default-white);
@@ -75,6 +85,13 @@
     width: 27dvw;
     color: var(--color-default-white);
     text-transform: uppercase;
+    @include view-port-lg {
+      width: 100%;
+      text-align: center;
+    }
+    @include view-port-md {
+      bottom: rem(68);
+    }
   }
   &__caption-wrapper {
     display: flex;
@@ -84,11 +101,11 @@
   }
   &__type {
     font-weight: bold;
-    font-size: rem(40);
+    @include fluid-text(40, 16);
   }
   &__address {
     font-weight: 600;
-    font-size: rem(24);
+    @include fluid-text(24, 12);
   }
   &__paginator-wrapper {
     position: absolute;
@@ -96,6 +113,9 @@
     width: 27dvw;
     text-align: center;
     z-index: 900;
+    @include view-port-lg {
+      width: 100%;
+    }
     .swiper-pagination-bullet {
       width: rem(15);
       height: rem(15);
@@ -108,11 +128,25 @@
   }
 }
 
+.mobile__stats {
+  display: none !important;
+  margin-bottom: rem(50);
+  @include view-port-lg {
+    display: flex !important;
+  }
+}
+
 .inverted-radius {
   --r: 30px;
   --s: 30px;
   --x: 1151px;
   --y: 165px;
+  @include view-port-xxl {
+    --r: 30px;
+    --s: 30px;
+    --x: 860px;
+    --y: 165px;
+  }
   aspect-ratio: 1;
   background: #000;
   border-radius: var(--r);
@@ -136,4 +170,8 @@
           var(--conic-part) 0 calc(-1 * var(--offset) - var(--y));
 
   mask-repeat: no-repeat;
+
+  @include view-port-lg {
+    mask: none;
+  }
 }

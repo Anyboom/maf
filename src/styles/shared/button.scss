@@ -8,12 +8,12 @@
   border-radius: rem(20);
   color: var(--color-default-white);
   font-weight: 500;
-  font-size: rem(14);
+  @include fluid-text(14, 10);
   &_font_large {
     padding: rem(20) rem(40);
     border-radius: rem(10);
     font-weight: bold;
-    font-size: rem(20);
+    @include fluid-text(20, 14);
   }
   @include hover {
     background: var(--color-nandor-hover) !important;

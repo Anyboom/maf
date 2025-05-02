@@ -1,18 +1,29 @@
 @use "../functions" as *;
+@use "../mixins" as *;
 
 .qa {
   margin-bottom: rem(50);
   &__title {
     margin-bottom: rem(90);
+    @include view-port-md {
+      margin-bottom: rem(45);
+    }
   }
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: rem(30);
+    @include view-port-md {
+      grid-template-columns: repeat(1, 1fr);
+      gap: rem(15);
+    }
   }
   &__inner {
     display: flex;
     flex-direction: column;
     gap: rem(30);
+    @include view-port-md {
+      gap: rem(15);
+    }
   }
 }

@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use "config" as *;
 
 // Для адаптивного текста
 @mixin fluid-text($max: 48, $min: 16) {
@@ -29,37 +30,37 @@
 }
 
 @mixin view-port-xxl {
-  @media (width <= var(--view-port-xxl)) {
+  @media (width <= $view-port-xxl) {
     @content;
   }
 }
 
 @mixin view-port-xl {
-  @media (width <= var(--view-port-xl)) {
+  @media (width <= $view-port-xl) {
     @content;
   }
 }
 
 @mixin view-port-lg {
-  @media (width <= var(--view-port-lg)) {
+  @media (width <= $view-port-lg) {
     @content;
   }
 }
 
 @mixin view-port-md {
-  @media (width <= var(--view-port-md)) {
+  @media (width <= $view-port-md) {
     @content;
   }
 }
 
 @mixin view-port-sm {
-  @media (width <= var(--view-port-sm)) {
+  @media (width <= $view-port-sm) {
     @content;
   }
 }
 
 @mixin view-port-xs {
-  @media (width <= var(--view-port-xs)) {
+  @media (width <= $view-port-xs) {
     @content;
   }
 }

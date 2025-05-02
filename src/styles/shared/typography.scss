@@ -1,14 +1,15 @@
 @use "../functions" as *;
+@use "../mixins" as *;
 
 .content {
   h2 {
-    font-size: rem(32);
+    @include fluid-text(36, 24);
     margin-bottom: rem(30);
     line-height: 1;
   }
 
   p {
-    font-size: rem(20);
+    @include fluid-text(20, 12);
     line-height: 1.2;
     &:not(:last-child) {
       margin-bottom: rem(30);

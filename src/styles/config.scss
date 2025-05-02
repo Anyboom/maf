@@ -10,11 +10,11 @@
   --font-size: 16px;
   --line-height: 1.65;
   --default-font: jost, sans-serif;
-
-  --view-port-xs: 375px;
-  --view-port-sm: 768px;
-  --view-port-md: 1024px;
-  --view-port-lg: 1280px;
-  --view-port-xl: 1440px;
-  --view-port-xxl: 1800px;
 }
+
+$view-port-xs: 576px;
+$view-port-sm: 768px;
+$view-port-md: 1024px;
+$view-port-lg: 1280px;
+$view-port-xl: 1440px;
+$view-port-xxl: 1800px;

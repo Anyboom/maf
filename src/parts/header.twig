@@ -46,17 +46,154 @@
                 </svg>
             </a>
         </div>
+        <div class="header__button-mobile" :class="{ 'header__button-mobile_active': mobileMenu }">
+            <svg width="22" height="22" viewBox="0 0 22 22" @click="mobileMenu = !mobileMenu" stroke="white">
+                <use href="img/sprite-icons.svg#catalog"></use>
+            </svg>
+        </div>
+        <div class="header__button-mobile-menu" :class="{ 'header__button-mobile-menu_active': mobileMenu }">
+            <div class="header__button-mobile-wrapper">
+                <div class="header__button-mobile-content">
+                    <h2>Меню</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__button-mobile-content">
+                    <h2>Каталог продукции</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                        <li>
+                            <a href="#">Элемент</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="header__line"></div>
     <nav class="header__nav">
         <ul class="header__nav-list">
-            <li class="header__nav-item">
-                <a href="#" class="header__nav-catalog">
-                    <svg width="22" height="22" viewBox="0 0 22 22">
+            <li class="header__nav-item" x-data="{ open: false }" @mouseleave="open = false">
+                <a href="#" class="header__nav-catalog-link" :class="{ 'header__nav-catalog-link_active': open }"
+                   @mouseover="open = true">
+                    <svg width="22" height="22" viewBox="0 0 22 22" stroke="white">
                         <use href="img/sprite-icons.svg#catalog"></use>
                     </svg>
                     <span>Каталог продукции</span>
                 </a>
+                <div class="header__nav-catalog-open" x-show="open">
+                    <div class="header__nav-catalog">
+                        <ul class="header__nav-catalog-menu">
+                            <li class="header__nav-catalog-menu-item">
+                                <a class="header__nav-catalog-menu-link" href="#">Элемент</a>
+                            </li>
+                            <li class="header__nav-catalog-menu-item">
+                                <a class="header__nav-catalog-menu-link" href="#">Элемент</a>
+                            </li>
+                            <li class="header__nav-catalog-menu-item">
+                                <a class="header__nav-catalog-menu-link" href="#">Элемент</a>
+                            </li>
+                            <li class="header__nav-catalog-menu-item">
+                                <a class="header__nav-catalog-menu-link" href="#">Элемент</a>
+                            </li>
+                            <li class="header__nav-catalog-menu-item">
+                                <a class="header__nav-catalog-menu-link" href="#">Элемент</a>
+                            </li>
+                            <li class="header__nav-catalog-menu-item">
+                                <a class="header__nav-catalog-menu-link" href="#">Элемент</a>
+                            </li>
+                            <li class="header__nav-catalog-menu-item">
+                                <a class="header__nav-catalog-menu-link" href="#">Элемент</a>
+                            </li>
+                            <li class="header__nav-catalog-menu-item">
+                                <a class="header__nav-catalog-menu-link" href="#">Элемент</a>
+                            </li>
+                            <li class="header__nav-catalog-menu-item">
+                                <a class="header__nav-catalog-menu-link" href="#">Элемент</a>
+                            </li>
+                            <li class="header__nav-catalog-menu-item">
+                                <a class="header__nav-catalog-menu-link" href="#">Элемент</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </li>
             <li class="header__nav-item">
                 <a href="#" class="header__nav-link">Реализованный проекты</a>

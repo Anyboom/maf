@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
-<body>
+<body x-data="{ mobileMenu: false }" :class="{ 'hidden': mobileMenu }">
 {% include 'parts/banner.twig' %}
 {% include 'parts/services.twig' %}
 {% include 'parts/works.twig' %}

@@ -15,7 +15,7 @@
     text-decoration: none;
     color: var(--color-default-black);
     font-weight: bold;
-    font-size: rem(24);
+    @include fluid-text(24, 16);
     display: flex;
     align-items: center;
     gap: rem(20);
@@ -29,6 +29,12 @@
     grid-template-columns: repeat(4, 1fr);
     gap: rem(30);
     color: var(--color-default-black);
+    @include view-port-md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include view-port-sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   &__card {
     @include hover {
@@ -42,6 +48,10 @@
     height: rem(260);
     overflow: hidden;
     margin-bottom: rem(25);
+    @include view-port-md {
+      margin-bottom: rem(12);
+      height: rem(196);
+    }
   }
   &__card-image {
     height: 100%;
@@ -51,13 +61,16 @@
   &__card-title {
     color: var(--color-default-black);
     font-weight: bold;
-    font-size: rem(24);
+    @include fluid-text(24, 18);
     text-transform: uppercase;
     margin-bottom: rem(25);
+    @include view-port-md {
+      margin-bottom: rem(12);
+    }
   }
   &__card-caption {
     color: var(--color-default-black);
-    font-size: rem(16);
+    @include fluid-text(16, 14);
     font-weight: 300;
   }
 }

@@ -1,10 +1,14 @@
 @use "../functions" as *;
+@use "../mixins" as *;
 
 .contacts {
   margin-bottom: rem(50);
   &__wrapper {
     display: flex;
     gap: rem(60);
+    @include view-port-md {
+      flex-wrap: wrap;
+    }
   }
   &__button-wrapper {
     display: flex;
@@ -16,6 +20,9 @@
     height: rem(767);
     overflow: hidden;
     border-radius: rem(20);
+    @include view-port-md {
+      order: -1;
+    }
   }
   &__map-object {
     height: 100%;
@@ -27,21 +34,29 @@
   &__item-wrapper {
     padding-left: rem(50);
     margin-bottom: rem(100);
+    @include view-port-sm {
+      padding-left: 0;
+      margin-bottom: rem(68);
+    }
   }
   &__content {
     padding-top: rem(50);
+    width: 100%;
+    @include view-port-md {
+      padding-top: 0;
+    }
   }
   &__item {
     margin-bottom: rem(15);
   }
   &__item-title {
     display: block;
-    font-size: rem(24);
+    @include fluid-text(24, 18);
     font-weight: 500;
   }
   &__item-value {
     display: block;
-    font-size: rem(32);
+    @include fluid-text(32, 22);
     font-weight: 500;
     padding-left: rem(50);
   }

@@ -1,6 +1,5 @@
 @use "../functions" as *;
 @use "../mixins" as *;
-@use "sass:color";
 
 .header {
   border-radius: rem(10);
@@ -16,11 +15,19 @@
     width: 100%;
     background: rgba(#ffffff, 0.1);
     height: rem(2);
+    @include view-port-lg {
+      display: none;
+    }
   }
   &__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  &__search {
+    @include view-port-md {
+      display: none;
+    }
   }
   &__search-input {
     max-width: rem(360);
@@ -29,6 +36,59 @@
   &__socials {
     display: flex;
     gap: rem(20);
+    @include view-port-sm {
+      display: none;
+    }
+  }
+  &__button-mobile-wrapper {
+    width: rem(300);
+    max-height: 85vh;
+    padding: rem(50) 0;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  &__button-mobile-content {
+    color: var(--color-default-black);
+    margin-bottom: rem(10);
+    text-transform: uppercase;
+    h2 {
+      font-size: rem(26);
+      padding-bottom: rem(10);
+    }
+    ul {
+      li {
+        margin-bottom: rem(10);
+        a {
+          color: var(--color-default-black);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__button-mobile {
+    display: none;
+    cursor: pointer;
+    z-index: 2100;
+    &_active {
+      svg {
+        stroke: var(--color-default-black);
+      }
+    }
+    @include view-port-lg {
+      display: block;
+    }
+  }
+  &__button-mobile-menu {
+    background: var(--color-default-white);
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: end;
+    &_active {
+      display: flex;
+    }
   }
   &__socials-image {
     fill: var(--color-nandor);
@@ -39,12 +99,18 @@
   &__content {
     display: flex;
     flex-direction: column;
+    @include view-port-lg {
+      display: none;
+    }
   }
   &__contacts {
     display: flex;
     flex-direction: column;
     text-align: right;
     font-weight: 500;
+    @include view-port-sm {
+      display: none;
+    }
   }
   &__contacts-email {
     font-size: rem(14);
@@ -70,6 +136,16 @@
     transform: translateY(50%);
     right: rem(15);
   }
+  &__button-wrapper {
+    @include view-port-xl {
+      display: none;
+    }
+  }
+  &__nav {
+    @include view-port-lg {
+      display: none;
+    }
+  }
   &__button {
     display: flex;
     flex-direction: row;
@@ -89,7 +165,7 @@
       color: var(--color-nandor-hover);
     }
   }
-  &__nav-catalog {
+  &__nav-catalog-link {
     display: flex;
     align-content: center;
     gap: rem(20);
@@ -100,9 +176,37 @@
       text-transform: uppercase;
       color: var(--color-default-white);
     }
-    @include hover {
+    &_active {
       background: var(--color-nandor-hover);
       border: 1px solid var(--color-nandor-hover);
     }
+  }
+  &__nav-catalog-menu-link {
+    text-transform: uppercase;
+    color: var(--color-default-black);
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+  &__nav-catalog-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: rem(20);
+    column-gap: rem(100);
+  }
+  &__nav-item {
+    position: relative;
+  }
+  &__nav-catalog-open {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    padding-top: rem(10);
+    color: var(--color-default-black);
+  }
+  &__nav-catalog {
+    background: var(--color-default-white);
+    padding: rem(20);
+    border-radius: rem(6);
   }
 }
