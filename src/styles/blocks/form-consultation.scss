@@ -4,6 +4,9 @@
 .form-consultation {
   padding-top: rem(150);
   margin-bottom: rem(50);
+  @include view-port-md {
+    padding-top: 0;
+  }
   &__wrapper {
     padding: rem(130) rem(85) rem(85) rem(85) ;
     border-radius: rem(20);
@@ -11,21 +14,31 @@
     color: var(--color-default-white);
     position: relative;
     z-index: 0;
+    @include view-port-md {
+      padding: rem(30);
+    }
   }
   &__background-image {
     position: absolute;
     right: 0;
     bottom: 0;
+    transform: translateX(-50%);
     z-index: -100;
+    @include view-port-xxl {
+      transform: translateX(-10%);
+    }
+    @include view-port-lg {
+      display: none;
+    }
   }
   &__title {
-    font-size: rem(48);
+    @include fluid-text(24, 24);
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.2;
   }
   &__description {
-    font-size: rem(24);
+    @include fluid-text(24, 14);
   }
   &__content {
     display: flex;
@@ -37,8 +50,15 @@
   &__form {
     display: flex;
     gap: rem(30);
+    flex-wrap: wrap;
+    @include view-port-md {
+      flex-direction: column;
+    }
   }
   &__form-input {
     min-width: rem(400);
+    @include view-port-md {
+      min-width: auto;
+    }
   }
 }

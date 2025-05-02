@@ -9,7 +9,7 @@
   }
 
   p {
-    @include fluid-text(20, 12);
+    @include fluid-text(20, 14);
     line-height: 1.2;
     &:not(:last-child) {
       margin-bottom: rem(30);
