@@ -2,10 +2,10 @@
 @use "../mixins" as *;
 
 .contacts {
-  margin-bottom: rem(50);
+  margin-bottom: clamp(rem(20), 5%, rem(50));
   &__wrapper {
     display: flex;
-    gap: rem(60);
+    gap: clamp(rem(20), 5%, rem(60));
     @include view-port-md {
       flex-wrap: wrap;
     }

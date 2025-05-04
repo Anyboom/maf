@@ -3,7 +3,7 @@
 
 .form-catalog {
   overflow: hidden;
-  margin-bottom: rem(50);
+  margin-bottom: clamp(rem(20), 5%, rem(50));
   padding: rem(130) rem(85) rem(85) rem(85);
   border-radius: rem(20);
   background: linear-gradient(120deg,rgba(0, 0, 0, 1) 0%, rgba(38, 38, 38, 1) 40%, rgba(30, 65, 31, 1) 70%);

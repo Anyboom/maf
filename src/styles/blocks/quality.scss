@@ -3,7 +3,7 @@
 
 .quality {
   padding-top: rem(50);
-  margin-bottom: rem(50);
+  margin-bottom: clamp(rem(20), 5%, rem(50));
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

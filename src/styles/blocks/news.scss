@@ -2,13 +2,13 @@
 @use "../mixins" as *;
 
 .news {
-  padding-top: rem(80);
-  margin-bottom: rem(50);
+  padding-top: clamp(rem(20), 6%, rem(80));
+  margin-bottom: clamp(rem(20), 5%, rem(50));
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: rem(50);
+    margin-bottom: clamp(rem(20), 5%, rem(50));
   }
   &__header-link {
     text-transform: uppercase;

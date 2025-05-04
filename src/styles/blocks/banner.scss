@@ -4,11 +4,8 @@
 .banner {
   position: relative;
   border-radius: rem(20);
-  margin-bottom: rem(50);
+  margin-bottom: clamp(rem(20), 5%, rem(50));
   overflow-x: hidden;
-  @include view-port-lg {
-    margin-bottom: rem(20);
-  }
   &__header {
     top: 0;
     left: 0;
@@ -133,7 +130,7 @@
 
 .mobile__stats {
   display: none !important;
-  margin-bottom: rem(50);
+  margin-bottom: clamp(rem(20), 5%, rem(50));
   @include view-port-lg {
     display: flex !important;
   }

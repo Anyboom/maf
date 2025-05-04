@@ -2,7 +2,7 @@
 @use "../mixins" as *;
 
 .company {
-  margin-bottom: rem(50);
+  margin-bottom: clamp(rem(20), 5%, rem(50));
   &__wrapper {
     display: flex;
     justify-content: space-between;

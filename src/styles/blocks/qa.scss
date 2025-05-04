@@ -2,11 +2,12 @@
 @use "../mixins" as *;
 
 .qa {
-  margin-bottom: rem(50);
+  margin-bottom: clamp(rem(20), 5%, rem(50));
   &__title {
     margin-bottom: rem(90);
+    padding-top: clamp(rem(20), 4%, rem(40));
     @include view-port-md {
-      margin-bottom: rem(45);
+      margin-bottom: rem(30);
     }
   }
   &__wrapper {

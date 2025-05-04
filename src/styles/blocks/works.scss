@@ -5,7 +5,7 @@
   overflow-x: hidden;
   position: relative;
   padding-bottom: rem(30);
-  margin-bottom: rem(50);
+  margin-bottom: clamp(rem(20), 5%, rem(50));
   &__item-wrapper {
     height: rem(254);
     background: #D3D3D3;

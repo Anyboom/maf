@@ -2,7 +2,7 @@
 @use "../mixins" as *;
 
 .form-project {
-  margin-bottom: rem(50);
+  margin-bottom: clamp(rem(20), 5%, rem(50));
   position: relative;
   z-index: 100;
   &__wrapper {
