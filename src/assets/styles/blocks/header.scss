@@ -7,10 +7,14 @@
   color: var(--color-default-white);
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: rem(20);
   margin-bottom: clamp(rem(20), 5%, rem(50));
   &_colored {
     background: var(--color-default-black);
+  }
+  &_bordered {
+    border-radius: rem(10);
   }
   &__line {
     width: 100%;
@@ -244,17 +248,22 @@
     scrollbar-width: thin;
   }
   &__buttons {
-    display: flex;
+    display: none;
     align-items: center;
     gap: rem(30);
+    @include view-port-lg {
+      display: flex;
+    }
   }
   &__button-search-input {
-    padding: 0 10px;
+    padding: 20px 10px;
+    border-radius: rem(10);
+    background: var(--color-default-black);
     position: absolute;
     left: 0;
     right: 0;
     width: 96vw;
-    transform: translateY(80%);
+    transform: translateY(35%);
     input {
       width: 100%;
       max-width: none;
