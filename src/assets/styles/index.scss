@@ -1,0 +1,31 @@
+@use "fonts";
+@use "config";
+@use "reset";
+
+@use "mixins";
+@use "common";
+
+@use "shared/accordion";
+@use "shared/button";
+@use "shared/input";
+@use "shared/title";
+@use "shared/typography";
+
+@use "blocks/about";
+@use "blocks/banner";
+@use "blocks/children-quality";
+@use "blocks/company";
+@use "blocks/contacts";
+@use "blocks/footer";
+@use "blocks/form-catalog";
+@use "blocks/form-consultation";
+@use "blocks/form-project";
+@use "blocks/header";
+@use "blocks/news";
+@use "blocks/qa";
+@use "blocks/quality";
+@use "blocks/services";
+@use "blocks/stats";
+@use "blocks/works";
+
+@use '../../../node_modules/swiper/swiper-bundle.min.css';

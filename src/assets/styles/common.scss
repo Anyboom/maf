@@ -1,0 +1,29 @@
+@use "functions" as *;
+@use "config" as *;
+@use "mixins" as *;
+
+body {
+  padding-top: clamp(rem(8), 3%, rem(25));
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  font-family: "jost", sans-serif;
+  background: var(--color-default-white);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+.container {
+  max-width: $view-port-xxl;
+  margin: 0 auto;
+  padding: 0 clamp(rem(8), 2%, rem(36));
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+::selection {
+  color: var(--color-default-white);
+  background: var(--color-nandor-hover);
+}

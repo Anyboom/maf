@@ -1,0 +1,13 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  &_font_large {
+    @include fluid-text(48, 20)
+  }
+  &_font_middle {
+    @include fluid-text(40, 20)
+  }
+}

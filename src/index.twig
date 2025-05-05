@@ -1,29 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/index.scss">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-</head>
-<body x-data="{ mobileMenu: false }" :class="{ 'hidden': mobileMenu }">
-{% include 'parts/banner.twig' %}
-{% include 'parts/services.twig' %}
-{% include 'parts/works.twig' %}
-{% include 'parts/quality.twig' %}
-{% include 'parts/form-catalog.twig' %}
-{% include 'parts/children-quality.twig' %}
-{% include 'parts/form-project.twig' %}
-{% include 'parts/about.twig' %}
-{% include 'parts/qa.twig' %}
-{% include 'parts/news.twig' %}
-{% include 'parts/form-consultation.twig' %}
-{% include 'parts/company.twig' %}
-{% include 'parts/contacts.twig' %}
-{% include 'parts/footer.twig' %}
-<script defer type="module" src="js/app.ts"></script>
-</body>
-</html>
+{% extends 'layouts/main.layout.twig' %}
+
+{% block content %}
+
+{% include 'components/banner.twig' %}
+{% include 'components/services.twig' %}
+{% include 'components/works.twig' %}
+{% include 'components/quality.twig' %}
+{% include 'components/form-catalog.twig' %}
+{% include 'components/children-quality.twig' %}
+{% include 'components/form-project.twig' %}
+{% include 'components/about.twig' %}
+{% include 'components/qa.twig' %}
+{% include 'components/news.twig' %}
+{% include 'components/form-consultation.twig' %}
+{% include 'components/company.twig' %}
+{% include 'components/contacts.twig' %}
+{% include 'components/footer.twig' %}
+
+{% endblock %}
