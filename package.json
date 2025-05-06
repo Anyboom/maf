@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "source": "src/index.twig",
   "scripts": {
-    "start": "parcel src/*.twig",
-    "build": "parcel build src/*.twig"
+    "start": "parcel src/*.twig --no-source-maps",
+    "build": "parcel build src/*.twig --no-source-maps --public-url ."
   },
   "keywords": [],
   "author": "Anyboom",
