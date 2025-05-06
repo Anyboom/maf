@@ -1,0 +1,22 @@
+<div class="container">
+    <section class="project-list">
+        <div class="project-list__wrapper">
+            {% for i in 1..9 %}
+            <div class="project-list__item">
+                <div class="project-list__item-image-wrapper">
+                    <img src="assets/img/project-list_1.png?as=webp" class="project-list__item-image" alt="#">
+                </div>
+                <h2 class="project-list__item-title">Казань, ул.Касаткина, д.23</h2>
+                <a href="#" class="project-list__item-link">
+                    <svg width="25" height="25" viewBox="0 0 17 17">
+                        <use href="assets/img/sprite-icons.svg#arrow"></use>
+                    </svg>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="project-list__buttons">
+            <a class=" button button_font_large" href="#">Отправить каталог</a>
+        </div>
+    </section>
+</div>

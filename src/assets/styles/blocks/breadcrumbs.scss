@@ -1,0 +1,22 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.breadcrumb {
+  @include fluid-text(16, 12);
+  margin-bottom: clamp(rem(20), 5%, rem(50));
+  &__link {
+    color: var(--color-default-black);
+    text-decoration: none;
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+  &__item {
+    display: inline-block;
+    &:not(:last-child)::after {
+      content: ">";
+      margin: 0 8px;
+      color: #555;
+    }
+  }
+}

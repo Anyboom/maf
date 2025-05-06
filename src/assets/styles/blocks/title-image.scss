@@ -1,0 +1,48 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.title-image {
+  position: relative;
+  margin-bottom: clamp(rem(20), 5%, rem(50));
+  &__title {
+    font-size: clamp(rem(20), 4vw, rem(72));
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-transform: uppercase;
+    line-height: 1;
+
+    @include view-port-sm {
+      position: static;
+      padding-top: rem(25);
+    }
+  }
+  &__image  {
+    width: 100%;
+    height: clamp(rem(250), 35vw, rem(450));
+    overflow: hidden;
+    border-radius: rem(10);
+
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 35% 75%, 30% 100%, 0 100%);
+
+    @include view-port-xl {
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 35% 80%, 30% 100%, 0 100%);
+    }
+
+    @include view-port-lg {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 35% 85%, 30% 100%, 0 100%);
+    }
+
+    @include view-port-sm {
+      clip-path: none;
+    }
+
+    img {
+      filter: grayscale(100%);
+      object-fit: none;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

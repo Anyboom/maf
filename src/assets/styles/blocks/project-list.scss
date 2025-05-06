@@ -1,0 +1,119 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.project-list {
+  margin-bottom: clamp(rem(20), 5%, rem(50));
+  &__buttons {
+    text-align: center;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(rem(12), 2vw, rem(36));
+    margin-bottom: clamp(rem(10), 5%, rem(30));
+    @include view-port-xl {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include view-port-sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item-image-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__item-image {
+    filter: brightness(0.8);
+    object-fit: none;
+    height: 100%;
+    width: 100%;
+
+    --r: 10px;
+    --s: 15px;
+    --x: 85px;
+    --y: 85px;
+
+    @include view-port-sm {
+      --s: 10px;
+      --x: 55px;
+      --y: 55px;
+    }
+
+    aspect-ratio: 1;
+    background: #000;
+    border-radius: var(--r);
+
+    /* Общие части для маски */
+    --radial-part: / calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000 72%);
+    --conic-part: conic-gradient(from 90deg at calc(100% - var(--r)) calc(100% - var(--r)), #0000 25%, #000 0);
+    --offset: calc(var(--s) + var(--r));
+
+    /* Сборка маски */
+    mask:
+            /* Верхний правый угол */
+            calc(100% - var(--offset) - var(--x)) 100% var(--radial-part),
+              /* Нижний левый угол */
+            100% calc(100% - var(--offset) - var(--y)) var(--radial-part),
+              /* Внутренний радиальный градиент */
+            radial-gradient(var(--s) at 100% 100%, #0000 99%, #000 calc(100% + 1px)) calc(-1 * var(--r) - var(--x)) calc(-1 * var(--r) - var(--y)),
+              /* Правый конический градиент */
+            var(--conic-part) calc(-1 * var(--offset) - var(--x)) 0,
+              /* Левый конический градиент */
+            var(--conic-part) 0 calc(-1 * var(--offset) - var(--y));
+
+    mask-repeat: no-repeat;
+  }
+
+  &__item {
+    position: relative;
+    height: rem(600);
+    overflow: hidden;
+    border-radius: rem(10);
+
+    @include view-port-sm {
+      height: rem(250);
+    }
+  }
+
+  &__item-title {
+    @include fluid-text(24, 14);
+
+    color: var(--color-default-white);
+    position: absolute;
+    bottom: rem(40);
+    left: rem(40);
+    hyphens: manual;
+    text-wrap: balance;
+    max-width: rem(260);
+    z-index: 1000;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    @include view-port-sm {
+      bottom: rem(20);
+      left: rem(20);
+      width: 67vw;
+    }
+  }
+
+  &__item-link {
+    background: var(--color-nandor);
+    width: rem(100);
+    height: rem(100);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: rem(12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include view-port-sm {
+      width: rem(70);
+      height: rem(70);
+    }
+  }
+}

@@ -46,6 +46,7 @@
     object-fit: none;
   }
   &__stats {
+    z-index: 950;
     position: absolute;
     bottom: 0;
     right: 0;

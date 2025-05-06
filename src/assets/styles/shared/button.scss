@@ -8,6 +8,7 @@
   border-radius: rem(20);
   color: var(--color-default-white);
   font-weight: 500;
+  display: inline-block;
   @include fluid-text(14, 10);
   &_font_large {
     padding: rem(20) rem(40);

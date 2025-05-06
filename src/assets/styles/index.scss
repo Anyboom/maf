@@ -28,4 +28,8 @@
 @use "blocks/stats";
 @use "blocks/works";
 
+@use "blocks/title-image";
+@use "blocks/breadcrumbs";
+@use "blocks/project-list";
+
 @use '../../../node_modules/swiper/swiper-bundle.min.css';
