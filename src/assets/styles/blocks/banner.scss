@@ -152,6 +152,7 @@
   margin-bottom: clamp(rem(20), 5%, rem(50));
   @include view-port-lg {
     display: flex !important;
+    position: relative;
   }
 }
 

@@ -3,7 +3,6 @@
 @use "mixins" as *;
 
 body {
-  padding-top: clamp(rem(8), 3%, rem(25));
   min-width: 320px;
   position: relative;
   overflow-x: hidden;

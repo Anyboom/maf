@@ -272,6 +272,7 @@
   }
   &__button-search, &__button-phone {
     display: none;
+    height: 20px;
     @include view-port-sm {
       display: block;
     }

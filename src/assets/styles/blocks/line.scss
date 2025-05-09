@@ -1,0 +1,5 @@
+@use "../functions" as *;
+
+.line {
+  height: clamp(8px, 3vw, 25px);
+}
