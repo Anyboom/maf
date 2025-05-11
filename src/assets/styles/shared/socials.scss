@@ -1,0 +1,13 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.socials {
+  display: flex;
+  gap: rem(20);
+  &__image {
+    fill: var(--color-nandor);
+    @include hover {
+      fill: var(--color-nandor-hover);
+    }
+  }
+}

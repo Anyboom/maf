@@ -39,8 +39,6 @@
     background: var(--color-default-white);
   }
   &__socials {
-    display: flex;
-    gap: rem(20);
     @include view-port-sm {
       display: none;
     }
@@ -100,12 +98,6 @@
     align-items: end;
     &_active {
       display: flex;
-    }
-  }
-  &__socials-image {
-    fill: var(--color-nandor);
-    @include hover {
-      fill: var(--color-nandor-hover);
     }
   }
   &__content {

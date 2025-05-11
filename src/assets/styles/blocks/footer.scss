@@ -49,16 +49,6 @@
     align-items: center;
     gap: rem(20);
   }
-  &__logo-socials {
-    display: flex;
-    gap: rem(20);
-  }
-  &__logo-socials-image {
-    fill: var(--color-nandor);
-    @include hover {
-      fill: var(--color-nandor-hover);
-    }
-  }
   &__logo-caption {
     color: #ffffff;
   }
