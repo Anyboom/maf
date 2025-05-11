@@ -13,6 +13,8 @@
   gap: rem(40);
   overflow-x: auto;
   scrollbar-width: thin;
+  height: 100%;
+  position: relative;
   &__item {
     display: flex;
     gap: rem(20);
