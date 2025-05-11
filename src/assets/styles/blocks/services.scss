@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: clamp(rem(10), 1%, rem(30));
+  gap: clamp(rem(10), 2vw, rem(30));
   position: relative;
   @include view-port-sm {
     grid-template-columns: repeat(1, 1fr);
