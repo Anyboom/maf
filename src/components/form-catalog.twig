@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" x-data="formCatalog()">
     <section class="form-catalog">
         <div class="form-catalog__wrapper">
             <div class="form-catalog__content">
@@ -7,13 +7,67 @@
                 <span class="form-catalog__description">Отправьте ваш номер телефона в WhatsApp или Telegram – и мгновенно
             получите PDF-каталог:</span>
             </div>
-            <form action="#" class="form-catalog__form">
-                <input required class="input form-catalog__form-input" type="text" placeholder="Ваш телефон">
-                <input required class="input form-catalog__form-input" type="text" placeholder="Отравить Whatsapp или Telegram">
-                <input class="form-catalog__form-button button button_font_large" type="submit" value="Отправить каталог">
+            <form class="form-catalog__form" @submit.prevent="submit()">
+                <input required class="input form-catalog__form-input" type="tel" pattern="[0-9]{11}"
+                       placeholder="Ваш телефон" x-model="phone">
+                <input required class="input form-catalog__form-input" type="text"
+                       placeholder="Отравить Whatsapp или Telegram" x-model="type">
+                <input value="Отправить каталог" class="form-catalog__form-button button button_font_large"
+                       type="submit">
             </form>
         </div>
         <img class="form-catalog__background-image" src="assets/img/form-catalog_1.png?as=webp" alt="">
         <img class="form-catalog__badge-image" src="assets/img/form-catalog_2.png?as=webp" alt="">
     </section>
 </div>
+
+<script>
+    function formCatalog() {
+        const toastSuccess = {
+            text: "Форма успешно отправлена",
+            duration: 2000,
+            gravity: "top",
+            position: "right",
+            style: {
+                background: "var(--color-nandor)",
+            },
+        };
+
+        const toastFail = {
+            text: "Произошла ошибка, не смогли отправить форму",
+            duration: 2000,
+            gravity: "top",
+            position: "right",
+            style: {
+                background: "var(--color-tall-poppy)",
+            },
+        };
+
+        return {
+            loading: false,
+            phone: "",
+            type: "",
+            url: "/",
+            async submit() {
+                if (this.phone.trim().length > 0 && this.type.trim().length > 0) {
+                    this.loading = true;
+
+                    try {
+                        await axios.post(this.url, {
+                            phone: this.phone,
+                            type: this.type,
+                        });
+
+                        this.phone = this.type = String();
+
+                        Toastify(toastSuccess).showToast();
+                    } catch {
+                        Toastify(toastFail).showToast();
+                    } finally {
+                        this.loading = false;
+                    }
+                }
+            }
+        }
+    }
+</script>

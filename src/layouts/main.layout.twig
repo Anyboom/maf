@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/styles/index.scss">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body x-data="{ mobileMenu: false }" :class="{ 'hidden': mobileMenu }">
@@ -17,6 +18,8 @@
     <p>Контент не определен</p>
 {% endblock %}
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script defer type="module" src="assets/js/app.ts"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
