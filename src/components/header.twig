@@ -172,37 +172,6 @@
     <div class="header__line"></div>
     <nav class="header__nav">
         <ul class="header__nav-list">
-            <li class="header__nav-item" x-data="{ open: false }" @mouseleave="open = false">
-                <div class="header__nav-catalog-link" :class="{ 'header__nav-catalog-link_active': open }"
-                   @mouseover="open = true">
-                    <svg width="22" height="22" viewBox="0 0 22 22" stroke="white">
-                        <use href="assets/img/sprite-icons.svg#catalog"></use>
-                    </svg>
-                    <span>Каталог продукции</span>
-                </div>
-                <div class="header__nav-catalog-open" x-show="open">
-                    <div class="header__nav-catalog">
-                        <ul class="header__nav-catalog-menu">
-                            <li class="header__nav-catalog-menu-item">
-                                <a class="header__nav-catalog-menu-link" href="#">
-                                    <div class="header__nav-catalog-menu-image-wrapper">
-                                        <img src="https://mafmarket.ru/upload/iblock/18f/18f92f72a70fee15231e366162abeb22.png" alt="">
-                                    </div>
-                                    <span>Элемент</span>
-                                </a>
-                            </li>
-                            <li class="header__nav-catalog-menu-item">
-                                <a class="header__nav-catalog-menu-link" href="#">
-                                    <div class="header__nav-catalog-menu-image-wrapper">
-                                        <img src="https://mafmarket.ru/upload/iblock/efa/efa68a46e1ff47989e153e655a89303e.jpg" alt="">
-                                    </div>
-                                    <span>Элемент</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
             <li class="header__nav-item">
                 <a href="#" class="header__nav-link">Реализованный проекты</a>
             </li>
