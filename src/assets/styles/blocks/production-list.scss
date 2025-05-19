@@ -1,0 +1,51 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.production-list {
+  margin-bottom: clamp(rem(20), 5%, rem(50));
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(rem(12), 2vw, rem(36));
+    @include view-port-xl {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include view-port-sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__item-wrapper {
+    height: rem(327);
+    background: #D3D3D3;
+    overflow: hidden;
+    border-radius: rem(20);
+    position: relative;
+    @include hover {
+      background: linear-gradient(120deg,rgba(0, 0, 0, 1) 0%, rgba(38, 38, 38, 1) 40%, rgba(30, 65, 31, 1) 70%);
+      .production-list__item-caption {
+        color: var(--color-default-white);
+      }
+      + .production-list__item-line {
+        background: linear-gradient(120deg,rgba(0, 0, 0, 1) 0%, rgba(38, 38, 38, 1) 40%, rgba(30, 65, 31, 1) 70%);
+      }
+    }
+  }
+  &__item-image {
+    position: absolute;
+    right: -25%;
+    bottom: -10%;
+    object-fit: contain;
+  }
+  &__item-caption {
+    font-weight: bold;
+    font-size: rem(24);
+    color: var(--color-default-black);
+    text-transform: uppercase;
+    max-width: rem(200);
+    display: inline-block;
+    line-height: 1.2;
+    position: absolute;
+    bottom: rem(50);
+    left: rem(20);
+  }
+}
