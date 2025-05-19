@@ -1,0 +1,21 @@
+<div class="container">
+    <section class="product-list">
+        <div class="product-list__wrapper">
+            {% for i in 1..9 %}
+                <div class="product-list__item">
+                    <div class="product-list__item-image-wrapper">
+                        <img src="assets/img/product-list_1.png?as=webp" class="product-list__item-image" alt="#">
+                    </div>
+                    <div class="product-list__item-content">
+                        <h2 class="product-list__item-title">Conics CON412 табурет</h2>
+                        <a href="#" class="product-list__item-link">
+                            <svg width="34" height="34" viewBox="0 0 34 34">
+                                <use href="assets/img/sprite-icons.svg#cart"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>

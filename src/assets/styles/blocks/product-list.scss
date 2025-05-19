@@ -1,0 +1,61 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.product-list {
+  margin-bottom: clamp(rem(20), 5%, rem(50));
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(rem(12), 2vw, rem(36));
+    margin-bottom: clamp(rem(10), 5%, rem(30));
+    @include view-port-xl {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include view-port-sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__item-title {
+    font-weight: bold;
+    @include fluid-text(24, 14);
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  &__item-image {
+    object-fit: none;
+    height: clamp(rem(250), 25vw, rem(450));
+    width: 100%;
+    @include view-port-sm {
+      object-fit: contain;
+    }
+  }
+  &__item-link {
+    background: #212121;
+    border-radius: rem(20);
+    height: rem(67);
+    width: rem(67);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-shrink: 0;
+    @include hover {
+      background: #333333;
+    }
+  }
+  &__item-content {
+    display: flex;
+    gap: rem(20);
+    justify-content: space-between;
+    @include view-port-sm {
+      align-items: center;
+    }
+  }
+  &__item {
+    position: relative;
+    background: #ffffff;
+    border-radius: rem(20);
+    padding: rem(20) rem(40);
+  }
+}

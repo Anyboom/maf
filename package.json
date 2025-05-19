@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "source": "src/index.twig",
   "scripts": {
-    "start": "parcel src/*.twig --no-source-maps",
+    "start": "parcel serve src/*.twig --no-source-maps --no-cache",
     "build": "parcel build src/*.twig --no-source-maps --public-url ."
   },
   "keywords": [],
