@@ -1,0 +1,50 @@
+<div class="container">
+    <section class="contacts">
+        <div class="contacts__wrapper">
+            <div class="contacts__content">
+                <div class="contacts__item-wrapper">
+                    <div class="contacts__item">
+                        <span class="contacts__item-title">Телефон:</span>
+                        <span class="contacts__item-value">8 800 201 79 62</span>
+                    </div>
+                    <div class="contacts__item">
+                        <span class="contacts__item-title">Почта:</span>
+                        <span class="contacts__item-value">info@mafburo.ru</span>
+                    </div>
+                    <div class="contacts__item">
+                        <span class="contacts__item-title">Адрес:</span>
+                        <span class="contacts__item-value">Москва, ул. Новочерёмушкинская, д. 61</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts__map">
+                <div id="map" class="contacts__map-object"></div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    const map = L.map('map').setView([55.751244, 37.618423], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', undefined).addTo(map);
+
+    const markers = [
+        {
+            coords: [55.751244, 37.618423],
+            title: "Красная площадь",
+            desc: "Исторический центр Москвы"
+        },
+        {
+            coords: [55.752023, 37.617499],
+            title: "ГУМ",
+            desc: "Крупный торговый центр"
+        }
+    ];
+
+    markers.forEach(marker => {
+        L.marker(marker.coords)
+            .addTo(map)
+            .bindPopup(`<h3>${marker.title}</h3><p>${marker.desc}</p>`);
+    });
+</script>
