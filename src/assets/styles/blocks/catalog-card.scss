@@ -1,0 +1,149 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.catalog-card {
+  margin-bottom: clamp(rem(20), 5%, rem(50));
+  &__slider {
+    overflow: hidden;
+  }
+  &__swiper {
+    margin-bottom: rem(10);
+    border: 1px solid #F4F4F4;
+    .swiper-slide {
+      height: rem(500);
+      img {
+        object-fit: none;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  &__swiper-thumb {
+    padding: 0 rem(40) !important;
+    position: relative;
+    .swiper-slide {
+      height: rem(100);
+      img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  &__swiper-thumb-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F4F4F4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    z-index: 1000;
+    height: 100%;
+    cursor: pointer;
+    svg {
+      fill: #D1D1D1;
+    }
+    @include hover {
+      svg {
+        fill: #b0b0b0;
+      }
+    }
+  }
+  &__swiper-thumb-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F4F4F4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    z-index: 1000;
+    height: 100%;
+    cursor: pointer;
+    svg {
+      fill: #b0b0b0;
+    }
+    @include hover {
+      svg {
+        fill: #C7C7C7;
+      }
+    }
+  }
+  &__content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(rem(10), 5%, rem(40));
+    margin-bottom: clamp(rem(20), 5%, rem(50));
+  }
+  &__article {
+    margin-bottom: rem(25);
+  }
+  &__article-title {
+    @include fluid-text(14, 10);
+  }
+  &__article-number {
+    @include fluid-text(14, 10);
+  }
+  &__property {
+    margin-bottom: rem(20);
+  }
+  &__property-title {
+    @include fluid-text(16, 10);
+    margin-bottom: rem(15);
+    display: block;
+  }
+  &__property-text {
+    @include fluid-text(14, 10);
+    border: 2px solid #D9D9D9;
+    border-radius: rem(10);
+    padding: rem(5) rem(10);
+    display: inline-block;
+  }
+  &__property-radio {
+    display: none;
+    &:checked ~ .catalog-card__property-text {
+      border: 2px solid var(--color-nandor);
+    }
+  }
+  &__property-wrapper {
+    display: flex;
+    gap: rem(5);
+    flex-wrap: wrap;
+  }
+  &__property-table {
+    margin-bottom: rem(60);
+  }
+  &__property-table-title {
+    @include fluid-text(16, 10);
+    margin-bottom: rem(15);
+    display: block;
+  }
+  &__property-table-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(10);
+  }
+  &__property-table-item-title {
+    @include fluid-text(14, 10);
+  }
+  &__property-table-item-value {
+    @include fluid-text(14, 10);
+    text-decoration: underline;
+  }
+  &__buttons {
+    text-align: right;
+  }
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+  &__caption-line {
+    width: 100%;
+    background: #D9D9D9;
+    height: 2px;
+  }
+}

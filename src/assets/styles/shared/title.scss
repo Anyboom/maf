@@ -10,4 +10,7 @@
   &_font_middle {
     @include fluid-text(40, 20)
   }
+  &_font_small {
+    @include fluid-text(24, 12)
+  }
 }

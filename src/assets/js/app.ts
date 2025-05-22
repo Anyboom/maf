@@ -1,10 +1,32 @@
 import Swiper from 'swiper';
-import { Pagination, Autoplay } from 'swiper/modules';
+import {Pagination, Autoplay, Thumbs, Navigation} from 'swiper/modules';
 import Alpine from 'alpinejs';
 
 window["Alpine"] = Alpine;
 
 Alpine.start();
+
+// Инициализация слайдера с миниатюрами
+const thumbsSwiper = new Swiper('.catalog-card__swiper-thumb', {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  loop: true,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: ".catalog-card__swiper-thumb-next",
+    prevEl: ".catalog-card__swiper-thumb-prev",
+  },
+  modules: [Navigation]
+});
+
+new Swiper('.catalog-card__swiper', {
+  modules: [Thumbs], // Подключаем модуль Thumbs
+  spaceBetween: 10,
+  thumbs: {
+    swiper: thumbsSwiper, // Связываем с миниатюрами
+  },
+});
 
 new Swiper('.banner__swiper', {
   direction: 'horizontal',
@@ -43,3 +65,4 @@ new Swiper('.works__swiper', {
   },
   modules: [Autoplay],
 });
+

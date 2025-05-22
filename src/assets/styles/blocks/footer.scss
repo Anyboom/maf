@@ -12,6 +12,7 @@
   &__top-wrapper {
     display: flex;
     gap: rem(80);
+    justify-content: space-between;
     @include view-port-sm {
       flex-wrap: wrap;
       justify-content: center;
@@ -23,7 +24,7 @@
   }
   &__nav-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: rem(20);
     height: 100%;
     width: 100%;

@@ -169,6 +169,9 @@
     color: var(--color-default-white);
     text-transform: uppercase;
     font-weight: 500;
+    &_actived {
+      color: var(--color-nandor-hover);
+    }
     @include hover {
       color: var(--color-nandor-hover);
     }

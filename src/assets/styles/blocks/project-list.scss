@@ -110,7 +110,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    @include hover {
+      background: var(--color-nandor-hover);
+    }
     @include view-port-sm {
       width: rem(70);
       height: rem(70);
