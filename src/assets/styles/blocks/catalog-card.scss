@@ -77,6 +77,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(rem(10), 5%, rem(40));
     margin-bottom: clamp(rem(20), 5%, rem(50));
+    @include view-port-md {
+      display: block;
+    }
   }
   &__article {
     margin-bottom: rem(25);
@@ -145,5 +148,13 @@
     width: 100%;
     background: #D9D9D9;
     height: 2px;
+  }
+  &__input-wrapper {
+    border: 2px solid var(--color-nandor);
+    margin-bottom: rem(15);
+    border-radius: rem(10);
+  }
+  &__input {
+    width: 100%;
   }
 }
